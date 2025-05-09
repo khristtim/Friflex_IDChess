@@ -1,10 +1,11 @@
 from yandex_cloud_ml_sdk import YCloudML
 import json
+import os
 import re
 
 # Параметры авторизации
 folder_id = 'b1gst3c7cskk2big5fqn'
-api_key = 'AQVNzzJielnSayrAOlQWlxDMK49OShvzdqtUQdAp'
+api_key = os.getenv("YCLOUD_TOKEN")
 
 # Инициализация клиента
 sdk = YCloudML(folder_id=folder_id, auth=api_key)
